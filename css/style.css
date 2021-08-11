@@ -10,11 +10,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   flex-direction: column;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 
