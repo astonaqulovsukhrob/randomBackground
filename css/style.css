@@ -1,30 +1,42 @@
 * {
   box-sizing: border-box;
+  font-family: 'Akaya Kanadaka', cursive;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Pangolin', handwriting;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   flex-direction: column;
 }
 
 
 .btn {
-  width: 25rem;
+  width: 29rem;
   height: 10rem;  
   border: none;
   border-radius: 9px;
   outline: none;
+  animation: btnanime 4s ease-in-out infinite alternate;
 } 
 
+@keyframes btnanime {
+  form {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.btn span {
+  font-size: 18px;
+}
 
 .btn-grad {background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%)}
 .btn-grad {
@@ -48,10 +60,21 @@ body {
   background-color: aqua;
   padding: .5rem 1rem;
   margin:  30px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   border-radius: 9px;
   box-shadow: 0 0 20px #fff;
+  animation: audioanim 2s ease-in-out infinite alternate;
+}
+
+@keyframes audioanim {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 footer {
@@ -70,7 +93,18 @@ footer {
   justify-content: center;
   font-size: 25px;
   border-radius: 50%;
-  transition: all 0.75s;
+
+  animation: insanim 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes insanim {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
 }
 
 .myinsta a {
@@ -86,20 +120,44 @@ footer {
 }
 
 .myinsta:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 0 15px #fff;
+  box-shadow: 0 0 15px 8px #fff;
   background-color: #aaa;
 }
 
 .mytelegram:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 0 15px #fff;
+  box-shadow: 0 0 15px 8px #fff;
   background-color: #aaa;
   color: brown;
 }
 
 .mygithub:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 0 15px #fff;
-  background-color: #aaa;
+  box-shadow: 0 0 15px 8px #fff;
+  background-color: rgba(204, 204, 204, 0.767);
+}
+
+
+.btn-music {background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)}
+.btn-music {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-music:hover {
+  background-position: right center; /* change thedirection of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#playbtn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
 }
