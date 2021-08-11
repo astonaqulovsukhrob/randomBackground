@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Background</title>
+  <link rel="icon" href="react-2.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,11 +24,12 @@
     </h1>
   </button>
 
-  <div class="audio">
-    <audio src="Ahmed_Shad_ft_Shone_Dana__zasipay__remix.mp3"></audio>
-
+  <div class="container audio btn-music">
+    <audio id="audio" src="Ahmed_Shad_ft_Shone_Dana__zasipay__remix_.mp3"></audio>
     <span>Music</span>
-    <i class="fas fa-play"></i>
+    <button id="playbtn">
+      <i class="fas fa-play big"></i>
+    </button>
   </div>
 
   <footer>
@@ -48,6 +50,11 @@
     </div>
   </footer>
 
+
+
+
+  <!-- js -->
+  <script src="app.js"></script>
 </body>
 
 </html>
