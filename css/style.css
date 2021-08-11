@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Pangolin', handwriting;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  flex-direction: column;
+}
+
+
+.btn {
+  width: 25rem;
+  height: 10rem;  
+  border: none;
+  border-radius: 9px;
+  outline: none;
+} 
+
+
+.btn-grad {background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%)}
+.btn-grad {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change thedirection of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.audio {
+  background-color: aqua;
+  padding: .5rem 1rem;
+  margin:  30px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 9px;
+  box-shadow: 0 0 20px #fff;
+}
+
+footer {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 25px;
+}
+
+.myinsta, .mytelegram, .mygithub {
+  background-color: rgb(255, 255, 255);
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  border-radius: 50%;
+  transition: all 0.75s;
+}
+
+.myinsta a {
+  color: brown;
+}
+
+.mytelegram a {
+  color: rgba(0, 0, 255, 0.767);
+}
+
+.mygithub a {
+  color: black;
+}
+
+.myinsta:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 15px #fff;
+  background-color: #aaa;
+}
+
+.mytelegram:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 15px #fff;
+  background-color: #aaa;
+  color: brown;
+}
+
+.mygithub:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 15px #fff;
+  background-color: #aaa;
+}
