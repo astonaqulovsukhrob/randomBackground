@@ -1,45 +1,129 @@
+
 * {
   box-sizing: border-box;
   font-family: 'Akaya Kanadaka', cursive;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
-
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
+  text-align: center;
   flex-direction: column;
 }
 
-
 .btn {
-  width: 29rem;
-  height: 10rem;  
-  border: none;
-  border-radius: 9px;
   outline: none;
-  animation: btnanime 4s ease-in-out infinite alternate;
-} 
+  padding: 15px 18px;
+  border-radius: 9px;
+  border: none;
+  font-size: 12px;
+  animation: btnanim 2s ease-in-out infinite alternate;
+}
 
-@keyframes btnanime {
-  form {
+@keyframes btnanim {
+  from {
     transform: translateY(0);
   }
 
   to {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 }
 
-.btn span {
+h1 span {
   font-size: 18px;
 }
 
+.audio {
+  margin-top: 25px;
+  font-size: 20px;
+  animation: audioanim 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes audioanim {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.playbtn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  gap: 25px;
+  animation: btnanim 2s ease-in-out infinite alternate;
+}
+
+.myinstagram, .mytelegram, 
+.mygithub {
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px; 
+  border-radius: 50%;
+  transition: .8s;
+}
+
+.myinstagram:hover, .mytelegram:hover, 
+.mygithub:hover {
+  box-shadow: 0 0 18px 5px #fff;
+  background-color: #aaa;
+}
+
+.myinstagram a {
+  color: brown;
+}
+
+.mygithub a {
+  color: #000;
+}
+
+/* btnMusic */
+.btn-music {background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA  51%, #1D2B64  100%)}
+.btn-music {
+  padding: 10px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-music:hover {
+  background-position: right center; /* change thedirection of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+ 
+
+ /* btnButton */
 .btn-grad {background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%)}
 .btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -56,108 +140,10 @@ body {
   text-decoration: none;
 }
 
-.audio {
-  background-color: aqua;
-  padding: .5rem 1rem;
-  margin:  30px;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 9px;
-  box-shadow: 0 0 20px #fff;
-  animation: audioanim 2s ease-in-out infinite alternate;
-}
 
-@keyframes audioanim {
-  from {
-    transform: scale(1);
+@media (min-width: 768px) {
+  .audio {
+    margin-top: 25px;
+    font-size: 18px;
   }
-
-  to {
-    transform: scale(1.1);
-  }
-}
-
-footer {
-  display: flex;
-  gap: 20px;
-  position: absolute;
-  bottom: 25px;
-}
-
-.myinsta, .mytelegram, .mygithub {
-  background-color: rgb(255, 255, 255);
-  height: 45px;
-  width: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  border-radius: 50%;
-
-  animation: insanim 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes insanim {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-10px);
-  }
-}
-
-.myinsta a {
-  color: brown;
-}
-
-.mytelegram a {
-  color: rgba(0, 0, 255, 0.767);
-}
-
-.mygithub a {
-  color: black;
-}
-
-.myinsta:hover {
-  box-shadow: 0 0 15px 8px #fff;
-  background-color: #aaa;
-}
-
-.mytelegram:hover {
-  box-shadow: 0 0 15px 8px #fff;
-  background-color: #aaa;
-  color: brown;
-}
-
-.mygithub:hover {
-  box-shadow: 0 0 15px 8px #fff;
-  background-color: rgba(204, 204, 204, 0.767);
-}
-
-
-.btn-music {background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)}
-.btn-music {
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-music:hover {
-  background-position: right center; /* change thedirection of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-#playbtn {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  color: #fff;
-  font-size: 18px;
 }
