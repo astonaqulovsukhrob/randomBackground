@@ -79,7 +79,6 @@ body {
 
 footer {
   display: flex;
-  gap: 25px;
   position: absolute;
   bottom: 5px;
 }
@@ -93,7 +92,7 @@ footer {
   justify-content: center;
   font-size: 25px;
   border-radius: 50%;
-
+  margin: 0 10px;
   animation: insanim 1.5s ease-in-out infinite alternate;
 }
 
